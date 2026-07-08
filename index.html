@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web-Slinger — Neighborhood Watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="web-canvas"></canvas>
+
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <div class="brand">
+      <span class="brand-mark">◈</span>
+      WEB<span class="accent">SLINGER</span>
+    </div>
+    <nav class="navlinks">
+      <a href="#patrol">patrol log</a>
+      <a href="#gear">gear</a>
+      <a href="#signal">signal</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">FRIENDLY NEIGHBORHOOD STATUS: ACTIVE</p>
+    <h1>Keeping watch, <span class="stroke">one block</span> at a time.</h1>
+    <p class="sub">Real-time patrol updates, gear logs, and a direct line for when something feels off. Move your cursor — the web reacts.</p>
+    <div class="hero-cta">
+      <a href="#patrol" class="btn primary">View patrol log</a>
+      <a href="#signal" class="btn ghost">Send a signal</a>
+    </div>
+  </div>
+  <div class="hero-badge" aria-hidden="true">
+    <svg viewBox="0 0 200 200" width="180" height="180">
+      <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+      <g stroke="currentColor" stroke-width="1.4" opacity="0.6">
+        <line x1="100" y1="4" x2="100" y2="196"/>
+        <line x1="4" y1="100" x2="196" y2="100"/>
+        <line x1="30" y1="30" x2="170" y2="170"/>
+        <line x1="170" y1="30" x2="30" y2="170"/>
+        <circle cx="100" cy="100" r="30" fill="none"/>
+        <circle cx="100" cy="100" r="58" fill="none"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section id="patrol" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-num">01</span>
+      <h2>Patrol log</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="log-grid">
+      <article class="log-card">
+        <div class="log-time">21:40 · BROOKLYN</div>
+        <h3>Rooftop-to-rooftop sweep</h3>
+        <p>Clear across six blocks. One stuck cat, safely relocated. No web fluid wasted on unnecessary heroics.</p>
+      </article>
+      <article class="log-card">
+        <div class="log-time">19:05 · DOWNTOWN</div>
+        <h3>Traffic assist</h3>
+        <p>Redirected a runaway delivery cart before it reached the intersection. Civilians unfazed, mostly amused.</p>
+      </article>
+      <article class="log-card">
+        <div class="log-time">17:22 · MIDTOWN</div>
+        <h3>Quiet shift</h3>
+        <p>Nothing to report. Spent the hour recalibrating web-shooter pressure. Sometimes the best patrol is a boring one.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="gear" class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-num">02</span>
+      <h2>Gear log</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="gear-grid">
+      <div class="gear-row"><span>Web fluid</span><span class="bar"><span class="fill" style="width:82%"></span></span><span class="pct">82%</span></div>
+      <div class="gear-row"><span>Shooter cartridges</span><span class="bar"><span class="fill" style="width:64%"></span></span><span class="pct">64%</span></div>
+      <div class="gear-row"><span>Suit integrity</span><span class="bar"><span class="fill" style="width:97%"></span></span><span class="pct">97%</span></div>
+      <div class="gear-row"><span>Comms battery</span><span class="bar"><span class="fill" style="width:45%"></span></span><span class="pct">45%</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="signal" class="section">
+  <div class="wrap">
+    <div class="signal-card">
+      <h2>See something? Send a signal.</h2>
+      <p>Drop a location and what's happening — patrol routes get adjusted in real time.</p>
+      <form class="signal-form" id="signal-form">
+        <input type="text" placeholder="Location" required>
+        <input type="text" placeholder="What's going on?" required>
+        <button type="submit" class="btn primary">Send signal</button>
+      </form>
+      <p class="form-note" id="form-note"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">stay safe out there — the web has eyes.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
